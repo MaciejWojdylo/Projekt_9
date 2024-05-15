@@ -8,19 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+using System.IO;
+
 
 namespace Projekt_9
 {
     public partial class Form1 : Form
     {
+        DatabaseManager db = new DatabaseManager();
         public Form1()
         {
             InitializeComponent();
         }
 
         private void zapisDoBazy_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Już");
+        { 
             if (nrAlbumu.Text == "Wpisz tutaj" || string.IsNullOrEmpty(nrAlbumu.Text))
             {
                 return;
@@ -81,14 +84,33 @@ namespace Projekt_9
             {
                 return;
             }
-            /*
-            string result = $"{nrAlbumu.Text},{imieNazwisko.Text},{semestr.Text},{kierunek.Text},{dataGora.Text},{przedmiot.Text},{punkty.Text},{prowadzacy.Text},{powod.Text},{podpisStudenta.Text},{komisja1.Text},{komisja2.Text},{komisja3.Text},{dataDol.Text},{podpisKomisji.Text}";
-            MessageBox.Show(result);
-            */
+            string filePath = @"C:\Users\mjwoj\Desktop\Dane.txt";
+            string result = $"{nrAlbumu.Text},{imieNazwisko.Text},{semestr.Text},{kierunek.Text},{dataGora.Text},{przedmiot.Text},{punkty.Text},{prowadzacy.Text},{powod.Text},{podpisStudenta.Text},{komisja1.Text},{komisja2.Text},{komisja3.Text},{dataDol.Text},{podpisKomisji.Text}" + Environment.NewLine;
+            File.WriteAllText(filePath, result);  
         }
         private void odczytZBazy_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"C:\Users\mjwoj\Desktop\Dane.txt";
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (string line in lines)
+            {
+                string[] fields = line.Split(',');
+                nrAlbumu.Text= fields[0];
+                imieNazwisko.Text = fields[1];
+                semestr.Text = fields[2];
+                kierunek.Text = fields[3];
+                dataGora.Text = fields[4];
+                przedmiot.Text = fields[5];
+                punkty.Text = fields[6];
+                prowadzacy.Text = fields[7];
+                powod.Text = fields[8];
+                podpisStudenta.Text = fields[9];
+                komisja1.Text = fields[10];
+                komisja2.Text = fields[11];
+                komisja3.Text = fields[12];
+                dataDol.Text = fields[13];
+                podpisKomisji.Text = fields[14];
+            }
         }
 
         private void nrAlbumu_DoubleClick(object sender, EventArgs e)
@@ -166,4 +188,60 @@ namespace Projekt_9
         }
 
     }
+    public class DatabaseManager
+    {
+        private string connectionString = @"Data Source=C:\Users\mjwoj\Desktop\bazaDanych.db;Version=3;";
+        public void ReadData()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                string query = "SELECT * FROM Users";
+                SQLiteCommand command = new SQLiteCommand(query,connection);
+                try
+                {
+                    connection.Open();
+                    SQLiteDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int userId = reader.GetInt32(0); // Assuming Id is the first column
+                        string userName = reader.GetString(1); // Assuming Name is the second column
+                        Console.WriteLine($"User Id: {userId}, Name: {userName}");
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+        }
+        public void WriteData(int userId, string userName)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                string createTableQuery = @"CREATE TABLE IF NOT EXISTS Users (Id INTEGER PRIMARY KEY,Name TEXT)";
+
+                SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection);
+
+                try
+                {
+                    connection.Open();
+                    createTableCommand.ExecuteNonQuery();
+                    Console.WriteLine("Table 'Users' created or already exists.");
+                    string insertQuery = "INSERT INTO Users (Id, Name) VALUES (@Id, @Name)";
+                    SQLiteCommand insertCommand = new SQLiteCommand(insertQuery, connection);
+                    insertCommand.Parameters.AddWithValue("@Id", userId);
+                    insertCommand.Parameters.AddWithValue("@Name", userName);
+                    int rowsAffected = insertCommand.ExecuteNonQuery();
+                    Console.WriteLine($"{rowsAffected} row(s) inserted.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+        }
+
+    }
 }
+
