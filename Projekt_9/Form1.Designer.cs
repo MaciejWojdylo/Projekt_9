@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.komsja3 = new System.Windows.Forms.TextBox();
+            this.komisja3 = new System.Windows.Forms.TextBox();
             this.dataDol = new System.Windows.Forms.TextBox();
             this.podpisKomisji = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Document)).BeginInit();
@@ -244,15 +244,15 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "3";
             // 
-            // komsja3
+            // komisja3
             // 
-            this.komsja3.Location = new System.Drawing.Point(99, 747);
-            this.komsja3.Name = "komsja3";
-            this.komsja3.Size = new System.Drawing.Size(262, 20);
-            this.komsja3.TabIndex = 34;
-            this.komsja3.Text = "Wpisz tutaj";
-            this.komsja3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.komsja3.DoubleClick += new System.EventHandler(this.komsja3_DoubleClick);
+            this.komisja3.Location = new System.Drawing.Point(99, 747);
+            this.komisja3.Name = "komisja3";
+            this.komisja3.Size = new System.Drawing.Size(262, 20);
+            this.komisja3.TabIndex = 34;
+            this.komisja3.Text = "Wpisz tutaj";
+            this.komisja3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.komisja3.DoubleClick += new System.EventHandler(this.komisja3_DoubleClick);
             // 
             // dataDol
             // 
@@ -281,7 +281,7 @@
             this.ClientSize = new System.Drawing.Size(684, 1061);
             this.Controls.Add(this.podpisKomisji);
             this.Controls.Add(this.dataDol);
-            this.Controls.Add(this.komsja3);
+            this.Controls.Add(this.komisja3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -330,7 +330,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox komsja3;
+        private System.Windows.Forms.TextBox komisja3;
         private System.Windows.Forms.TextBox dataDol;
         private System.Windows.Forms.TextBox podpisKomisji;
     }
