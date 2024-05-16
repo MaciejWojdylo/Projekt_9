@@ -190,7 +190,7 @@ namespace Projekt_9
     }
     public class DatabaseManager
     {
-        private string connectionString = "..\\..\\..\\..\\..\repos\\Projekt_9\\BazaDanych\\bazaDanych.db;Version=3;";
+        private string connectionString = "..\\..\\..\\..\\..\\repos\\Projekt_9\\BazaDanych\\bazaDanych.db;Version=3;";
         public void ReadData()
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
