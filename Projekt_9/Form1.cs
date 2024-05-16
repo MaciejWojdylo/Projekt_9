@@ -84,16 +84,14 @@ namespace Projekt_9
             {
                 return;
             }
-            string executablePath = Path.GetDirectoryName(Application.ExecutablePath);
-            executablePath += "\\Dane.txt";
+            string filePath = "..\\..\\..\\..\\..\\repos\\Projekt_9\\BazaDanych\\Dane.txt";
             string result = $"{nrAlbumu.Text},{imieNazwisko.Text},{semestr.Text},{kierunek.Text},{dataGora.Text},{przedmiot.Text},{punkty.Text},{prowadzacy.Text},{powod.Text},{podpisStudenta.Text},{komisja1.Text},{komisja2.Text},{komisja3.Text},{dataDol.Text},{podpisKomisji.Text}" + Environment.NewLine;
-            File.WriteAllText(executablePath, result);  
+            File.WriteAllText(filePath, result);  
         }
         private void odczytZBazy_Click(object sender, EventArgs e)
         {
-            string executablePath = Path.GetDirectoryName(Application.ExecutablePath);
-            executablePath += "\\Dane.txt";
-            string[] lines = File.ReadAllLines(executablePath);
+            string filePath = "..\\..\\..\\..\\..\\repos\\Projekt_9\\BazaDanych\\Dane.txt";
+            string[] lines = File.ReadAllLines(filePath);
             foreach (string line in lines)
             {
                 string[] fields = line.Split(',');
