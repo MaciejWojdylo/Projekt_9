@@ -56,16 +56,16 @@
             // Document
             // 
             this.Document.Image = global::Projekt_9.Properties.Resources.Wniosek_o_egzamin_komisyjny_1;
-            this.Document.Location = new System.Drawing.Point(-1, -3);
+            this.Document.Location = new System.Drawing.Point(-2, -46);
             this.Document.Name = "Document";
             this.Document.Size = new System.Drawing.Size(683, 1063);
-            this.Document.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Document.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Document.TabIndex = 0;
             this.Document.TabStop = false;
             // 
             // zapisDoBazy
             // 
-            this.zapisDoBazy.Location = new System.Drawing.Point(103, 899);
+            this.zapisDoBazy.Location = new System.Drawing.Point(103, 800);
             this.zapisDoBazy.Name = "zapisDoBazy";
             this.zapisDoBazy.Size = new System.Drawing.Size(94, 42);
             this.zapisDoBazy.TabIndex = 16;
@@ -75,7 +75,7 @@
             // 
             // odczytZBazy
             // 
-            this.odczytZBazy.Location = new System.Drawing.Point(453, 900);
+            this.odczytZBazy.Location = new System.Drawing.Point(448, 800);
             this.odczytZBazy.Name = "odczytZBazy";
             this.odczytZBazy.Size = new System.Drawing.Size(95, 41);
             this.odczytZBazy.TabIndex = 17;
@@ -85,7 +85,7 @@
             // 
             // nrAlbumu
             // 
-            this.nrAlbumu.Location = new System.Drawing.Point(81, 146);
+            this.nrAlbumu.Location = new System.Drawing.Point(82, 138);
             this.nrAlbumu.Name = "nrAlbumu";
             this.nrAlbumu.Size = new System.Drawing.Size(262, 20);
             this.nrAlbumu.TabIndex = 18;
@@ -95,7 +95,7 @@
             // 
             // imieNazwisko
             // 
-            this.imieNazwisko.Location = new System.Drawing.Point(81, 182);
+            this.imieNazwisko.Location = new System.Drawing.Point(81, 173);
             this.imieNazwisko.Name = "imieNazwisko";
             this.imieNazwisko.Size = new System.Drawing.Size(262, 20);
             this.imieNazwisko.TabIndex = 19;
@@ -105,7 +105,7 @@
             // 
             // semestr
             // 
-            this.semestr.Location = new System.Drawing.Point(81, 218);
+            this.semestr.Location = new System.Drawing.Point(81, 207);
             this.semestr.Name = "semestr";
             this.semestr.Size = new System.Drawing.Size(262, 20);
             this.semestr.TabIndex = 20;
@@ -115,7 +115,7 @@
             // 
             // kierunek
             // 
-            this.kierunek.Location = new System.Drawing.Point(81, 253);
+            this.kierunek.Location = new System.Drawing.Point(81, 236);
             this.kierunek.Name = "kierunek";
             this.kierunek.Size = new System.Drawing.Size(262, 20);
             this.kierunek.TabIndex = 21;
@@ -125,7 +125,7 @@
             // 
             // dataGora
             // 
-            this.dataGora.Location = new System.Drawing.Point(487, 135);
+            this.dataGora.Location = new System.Drawing.Point(484, 129);
             this.dataGora.Name = "dataGora";
             this.dataGora.Size = new System.Drawing.Size(116, 20);
             this.dataGora.TabIndex = 22;
@@ -135,7 +135,7 @@
             // 
             // przedmiot
             // 
-            this.przedmiot.Location = new System.Drawing.Point(142, 454);
+            this.przedmiot.Location = new System.Drawing.Point(139, 417);
             this.przedmiot.Name = "przedmiot";
             this.przedmiot.Size = new System.Drawing.Size(273, 20);
             this.przedmiot.TabIndex = 23;
@@ -145,7 +145,7 @@
             // 
             // punkty
             // 
-            this.punkty.Location = new System.Drawing.Point(462, 454);
+            this.punkty.Location = new System.Drawing.Point(461, 417);
             this.punkty.Name = "punkty";
             this.punkty.Size = new System.Drawing.Size(95, 20);
             this.punkty.TabIndex = 24;
@@ -155,7 +155,7 @@
             // 
             // prowadzacy
             // 
-            this.prowadzacy.Location = new System.Drawing.Point(195, 480);
+            this.prowadzacy.Location = new System.Drawing.Point(190, 442);
             this.prowadzacy.Name = "prowadzacy";
             this.prowadzacy.Size = new System.Drawing.Size(408, 20);
             this.prowadzacy.TabIndex = 25;
@@ -165,7 +165,7 @@
             // 
             // powod
             // 
-            this.powod.Location = new System.Drawing.Point(81, 534);
+            this.powod.Location = new System.Drawing.Point(80, 486);
             this.powod.Name = "powod";
             this.powod.Size = new System.Drawing.Size(519, 20);
             this.powod.TabIndex = 26;
@@ -175,7 +175,7 @@
             // 
             // podpisStudenta
             // 
-            this.podpisStudenta.Location = new System.Drawing.Point(422, 582);
+            this.podpisStudenta.Location = new System.Drawing.Point(428, 533);
             this.podpisStudenta.Name = "podpisStudenta";
             this.podpisStudenta.Size = new System.Drawing.Size(165, 20);
             this.podpisStudenta.TabIndex = 27;
@@ -185,7 +185,7 @@
             // 
             // komisja1
             // 
-            this.komisja1.Location = new System.Drawing.Point(101, 699);
+            this.komisja1.Location = new System.Drawing.Point(103, 638);
             this.komisja1.Name = "komisja1";
             this.komisja1.Size = new System.Drawing.Size(260, 20);
             this.komisja1.TabIndex = 28;
@@ -195,7 +195,7 @@
             // 
             // komisja2
             // 
-            this.komisja2.Location = new System.Drawing.Point(101, 721);
+            this.komisja2.Location = new System.Drawing.Point(103, 657);
             this.komisja2.Name = "komisja2";
             this.komisja2.Size = new System.Drawing.Size(260, 20);
             this.komisja2.TabIndex = 29;
@@ -207,7 +207,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(78, 702);
+            this.label1.Location = new System.Drawing.Point(79, 638);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 16);
             this.label1.TabIndex = 30;
@@ -217,7 +217,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(78, 724);
+            this.label2.Location = new System.Drawing.Point(80, 655);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(15, 16);
             this.label2.TabIndex = 31;
@@ -238,7 +238,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(78, 750);
+            this.label4.Location = new System.Drawing.Point(80, 679);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 16);
             this.label4.TabIndex = 33;
@@ -246,7 +246,7 @@
             // 
             // komisja3
             // 
-            this.komisja3.Location = new System.Drawing.Point(99, 747);
+            this.komisja3.Location = new System.Drawing.Point(103, 675);
             this.komisja3.Name = "komisja3";
             this.komisja3.Size = new System.Drawing.Size(262, 20);
             this.komisja3.TabIndex = 34;
@@ -256,7 +256,7 @@
             // 
             // dataDol
             // 
-            this.dataDol.Location = new System.Drawing.Point(134, 817);
+            this.dataDol.Location = new System.Drawing.Point(136, 746);
             this.dataDol.Name = "dataDol";
             this.dataDol.Size = new System.Drawing.Size(95, 20);
             this.dataDol.TabIndex = 35;
@@ -266,7 +266,7 @@
             // 
             // podpisKomisji
             // 
-            this.podpisKomisji.Location = new System.Drawing.Point(422, 817);
+            this.podpisKomisji.Location = new System.Drawing.Point(428, 744);
             this.podpisKomisji.Name = "podpisKomisji";
             this.podpisKomisji.Size = new System.Drawing.Size(178, 20);
             this.podpisKomisji.TabIndex = 36;
@@ -278,7 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 1061);
+            this.ClientSize = new System.Drawing.Size(684, 847);
             this.Controls.Add(this.podpisKomisji);
             this.Controls.Add(this.dataDol);
             this.Controls.Add(this.komisja3);
